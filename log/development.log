@@ -1139,3 +1139,575 @@ Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-13 11:51:06 
 
 
 Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-13 11:51:06 -0700
+Mysql::Error: Table 'complete_fb_app.fb_items' doesn't exist: SHOW FULL FIELDS FROM `fb_items`
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateFbItems (20141213214318)
+  [1m[35m (114.4ms)[0m  CREATE TABLE `fb_items` (`id` int(11) auto_increment PRIMARY KEY, `fb_id` varchar(255), `likes_count` int(11), `comments_count` int(11), `content` varchar(255), `fb_time` datetime, `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (?)  [["version", "20141213214318"]]
+  [1m[36m (44.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-13 14:47:08 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticController#home as HTML
+  Rendered static/home.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 2388ms (Views: 2371.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-12-13 14:47:11 -0700
+
+
+Started GET "/assets/fb_items.css?body=1" for 127.0.0.1 at 2014-12-13 14:47:11 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-13 14:47:11 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-13 14:47:11 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-13 14:47:11 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-13 14:47:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-13 14:47:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-13 14:47:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-13 14:47:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-13 14:47:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-13 14:47:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-13 14:47:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-13 14:47:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-13 14:47:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-13 14:47:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-13 14:47:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-13 14:47:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-13 14:47:11 -0700
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-13 14:47:11 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-13 14:47:11 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-13 14:47:11 -0700
+
+
+Started GET "/assets/facebook.js?body=1" for 127.0.0.1 at 2014-12-13 14:47:11 -0700
+
+
+Started GET "/assets/fb_items.js?body=1" for 127.0.0.1 at 2014-12-13 14:47:11 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-13 14:47:11 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-13 14:48:35 -0700
+Processing by StaticController#home as HTML
+  Rendered static/home.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 187ms (Views: 184.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-12-13 14:48:35 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-13 14:48:35 -0700
+
+
+Started GET "/assets/fb_items.css?body=1" for 127.0.0.1 at 2014-12-13 14:48:35 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-13 14:48:35 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-13 14:48:35 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-13 14:48:35 -0700
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-13 14:48:35 -0700
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-13 14:48:35 -0700
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-13 14:48:35 -0700
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-13 14:48:35 -0700
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-13 14:48:35 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-13 14:48:35 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-13 14:48:35 -0700
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-13 14:48:35 -0700
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-13 14:48:35 -0700
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-13 14:48:35 -0700
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-13 14:48:35 -0700
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-13 14:48:35 -0700
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-13 14:48:35 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-13 14:48:35 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-13 14:48:35 -0700
+
+
+Started GET "/assets/fb_items.js?body=1" for 127.0.0.1 at 2014-12-13 14:48:35 -0700
+
+
+Started GET "/assets/facebook.js?body=1" for 127.0.0.1 at 2014-12-13 14:48:35 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-13 14:48:35 -0700
+
+
+Started GET "/signout" for 127.0.0.1 at 2014-12-13 14:48:39 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-13 14:48:39 -0700
+Processing by StaticController#home as HTML
+  Rendered static/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 179ms (Views: 178.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-12-13 14:48:41 -0700
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-12-13 14:48:43 -0700
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-12-13 14:48:44 -0700
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-12-13 14:48:44 -0700
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-12-13 14:48:48 -0700
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQBZmVyWVNYUx-Cp-HvQyO6xmcoYDPOcsjcK-vl059gME3WK66KTktpTDYUJB39-3j-wY1kk-tXzDUcDxb9fnRWdUcQFbPzra6ToP_oBPCzM9w8byIVRoKtknDFx2YrxxUAClmtbipcr_hYcH2DQI0-ZY2QQOC6Tw-bgwdxYYwQetsj5AeimwF7b5ykbGD-wwCDPhAFHMbPCtLDUBuiKXzx-E83uOODE8a3yseAXyHCCBb3oWEpQTmLoDHLNCRS6dlLIqwkLQlLPkJMgSMI7IEvLaOncqD1-K3e-vMXf2nxIvf2a8d_KaTvyD6oBwh5ldPM&state=ad4015c7cb5aa8ab98e969af1219100e8e90884b3fb0b34e" for 127.0.0.1 at 2014-12-13 14:50:46 -0700
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBZmVyWVNYUx-Cp-HvQyO6xmcoYDPOcsjcK-vl059gME3WK66KTktpTDYUJB39-3j-wY1kk-tXzDUcDxb9fnRWdUcQFbPzra6ToP_oBPCzM9w8byIVRoKtknDFx2YrxxUAClmtbipcr_hYcH2DQI0-ZY2QQOC6Tw-bgwdxYYwQetsj5AeimwF7b5ykbGD-wwCDPhAFHMbPCtLDUBuiKXzx-E83uOODE8a3yseAXyHCCBb3oWEpQTmLoDHLNCRS6dlLIqwkLQlLPkJMgSMI7IEvLaOncqD1-K3e-vMXf2nxIvf2a8d_KaTvyD6oBwh5ldPM", "state"=>"ad4015c7cb5aa8ab98e969af1219100e8e90884b3fb0b34e", "provider"=>"facebook"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`provider` = 'facebook' AND `users`.`uid` = '10152865216476745'  ORDER BY `users`.`id` ASC LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-13 14:50:47 -0700
+Processing by StaticController#home as HTML
+  Rendered static/home.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 180ms (Views: 179.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-12-13 14:50:48 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-13 14:50:48 -0700
+
+
+Started GET "/assets/fb_items.css?body=1" for 127.0.0.1 at 2014-12-13 14:50:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-13 14:50:48 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-13 14:50:48 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-13 14:50:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-13 14:50:48 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-13 14:50:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-13 14:50:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-13 14:50:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-13 14:50:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-13 14:50:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-13 14:50:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-13 14:50:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-13 14:50:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-13 14:50:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-13 14:50:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-13 14:50:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-13 14:50:48 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-13 14:50:48 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-13 14:50:48 -0700
+
+
+Started GET "/assets/facebook.js?body=1" for 127.0.0.1 at 2014-12-13 14:50:48 -0700
+
+
+Started GET "/assets/fb_items.js?body=1" for 127.0.0.1 at 2014-12-13 14:50:48 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-13 14:50:48 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-13 15:00:47 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticController#home as HTML
+  Rendered static/home.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 331ms (Views: 318.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-12-13 15:00:48 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-13 15:00:48 -0700
+
+
+Started GET "/assets/fb_items.css?body=1" for 127.0.0.1 at 2014-12-13 15:00:48 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-13 15:00:48 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-13 15:00:48 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-13 15:00:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-13 15:00:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-13 15:00:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-13 15:00:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-13 15:00:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-13 15:00:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-13 15:00:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-13 15:00:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-13 15:00:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-13 15:00:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-13 15:00:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-13 15:00:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-13 15:00:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-13 15:00:48 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-13 15:00:48 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-13 15:00:48 -0700
+
+
+Started GET "/assets/facebook.js?body=1" for 127.0.0.1 at 2014-12-13 15:00:48 -0700
+
+
+Started GET "/assets/fb_items.js?body=1" for 127.0.0.1 at 2014-12-13 15:00:48 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-13 15:00:48 -0700
+
+
+Started GET "/signout" for 127.0.0.1 at 2014-12-13 15:01:02 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-13 15:01:03 -0700
+Processing by StaticController#home as HTML
+  Rendered static/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 170ms (Views: 169.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-12-13 15:01:04 -0700
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-12-13 15:01:04 -0700
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQAi9MLwgE9_981fDCJofSJOPMtMxaS5l-6nhvFn-3Koejtk6KsiqR60Bi6PFItUKUSeGKIfyaWgf-W-KeeYHapW0URdbpQaaKEtxvYxMauMB0j0iL7lfVPblREwPdc7VuTCB9G3mpJR8yImT-RM7roEIbXYeB8-qe1pDU3yDIA7kdZ6X9XB1eHfuQZsHZ9MZK8e1u1_as014jNY7w7rXo7AfrUlJYhIou4sd91e_ABBvfvryXcy5yNWBlISC5F78uvboO-7VtDx0DV8AJJZm5KhUlk_GsGNdXywoWSwczCcFIPxNhzC7LUSpIc06cEJizE&state=b170d039d6c822408652d088a8298393ac08c0a967ee40d8" for 127.0.0.1 at 2014-12-13 15:02:31 -0700
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAi9MLwgE9_981fDCJofSJOPMtMxaS5l-6nhvFn-3Koejtk6KsiqR60Bi6PFItUKUSeGKIfyaWgf-W-KeeYHapW0URdbpQaaKEtxvYxMauMB0j0iL7lfVPblREwPdc7VuTCB9G3mpJR8yImT-RM7roEIbXYeB8-qe1pDU3yDIA7kdZ6X9XB1eHfuQZsHZ9MZK8e1u1_as014jNY7w7rXo7AfrUlJYhIou4sd91e_ABBvfvryXcy5yNWBlISC5F78uvboO-7VtDx0DV8AJJZm5KhUlk_GsGNdXywoWSwczCcFIPxNhzC7LUSpIc06cEJizE", "state"=>"b170d039d6c822408652d088a8298393ac08c0a967ee40d8", "provider"=>"facebook"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`provider` = 'facebook' AND `users`.`uid` = '10152865216476745'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-13 15:02:34 -0700
+Processing by StaticController#home as HTML
+  Rendered static/home.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 170ms (Views: 168.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/fb_items.css?body=1" for 127.0.0.1 at 2014-12-13 15:02:34 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-13 15:02:34 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-13 15:02:34 -0700
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-12-13 15:02:34 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-13 15:02:34 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-13 15:02:34 -0700
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-13 15:02:34 -0700
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-13 15:02:34 -0700
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-13 15:02:34 -0700
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-13 15:02:34 -0700
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-13 15:02:34 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-13 15:02:34 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-13 15:02:34 -0700
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-13 15:02:34 -0700
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-13 15:02:34 -0700
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-13 15:02:34 -0700
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-13 15:02:34 -0700
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-13 15:02:34 -0700
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-13 15:02:34 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-13 15:02:34 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-13 15:02:34 -0700
+
+
+Started GET "/assets/facebook.js?body=1" for 127.0.0.1 at 2014-12-13 15:02:34 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-13 15:02:34 -0700
+
+
+Started GET "/assets/fb_items.js?body=1" for 127.0.0.1 at 2014-12-13 15:02:34 -0700
+
+
+Started GET "/menu" for 127.0.0.1 at 2014-12-13 15:06:27 -0700
+Processing by StaticController#user_menu as HTML
+  Rendered static/user_menu.html.erb within layouts/application (14.6ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined method `fb_items_url_path' for #<#<Class:0x00000005d8a9a0>:0x00000005d89c30>):
+    1: <h1> user menu </h1>
+    2: 
+    3: <%= link_to 'Posts menu', :fb_items_url %>
+    4: <%= link_to 'Photos menu', :fb_items_url %>
+  app/views/static/user_menu.html.erb:3:in `_app_views_static_user_menu_html_erb___2979429655165352300_49028700'
+
+
+  Rendered /home/vignesh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/vignesh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/vignesh/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.5ms)
+
+
+Started GET "/menu" for 127.0.0.1 at 2014-12-13 15:06:48 -0700
+Processing by StaticController#user_menu as HTML
+  Rendered static/user_menu.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 192ms (Views: 188.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-13 15:06:48 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-13 15:06:48 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-13 15:06:48 -0700
+
+
+Started GET "/assets/fb_items.css?body=1" for 127.0.0.1 at 2014-12-13 15:06:48 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-13 15:06:48 -0700
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-12-13 15:06:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-13 15:06:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-13 15:06:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-13 15:06:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-13 15:06:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-13 15:06:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-13 15:06:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-13 15:06:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-13 15:06:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-13 15:06:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-13 15:06:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-13 15:06:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-13 15:06:48 -0700
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-13 15:06:48 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-13 15:06:48 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-13 15:06:48 -0700
+
+
+Started GET "/assets/facebook.js?body=1" for 127.0.0.1 at 2014-12-13 15:06:48 -0700
+
+
+Started GET "/assets/fb_items.js?body=1" for 127.0.0.1 at 2014-12-13 15:06:48 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-13 15:06:48 -0700

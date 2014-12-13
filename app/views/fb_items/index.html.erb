@@ -1,0 +1,35 @@
+<h1>Listing fb_items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fb</th>
+      <th>Likes count</th>
+      <th>Comments count</th>
+      <th>Content</th>
+      <th>Fb time</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fb_items.each do |fb_item| %>
+      <tr>
+        <td><%= fb_item.fb_id %></td>
+        <td><%= fb_item.likes_count %></td>
+        <td><%= fb_item.comments_count %></td>
+        <td><%= fb_item.content %></td>
+        <td><%= fb_item.fb_time %></td>
+        <td><%= fb_item.user_id %></td>
+        <td><%= link_to 'Show', fb_item %></td>
+        <td><%= link_to 'Edit', edit_fb_item_path(fb_item) %></td>
+        <td><%= link_to 'Destroy', fb_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fb item', new_fb_item_path %>

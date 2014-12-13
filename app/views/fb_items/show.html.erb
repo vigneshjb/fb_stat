@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fb:</strong>
+  <%= @fb_item.fb_id %>
+</p>
+
+<p>
+  <strong>Likes count:</strong>
+  <%= @fb_item.likes_count %>
+</p>
+
+<p>
+  <strong>Comments count:</strong>
+  <%= @fb_item.comments_count %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @fb_item.content %>
+</p>
+
+<p>
+  <strong>Fb time:</strong>
+  <%= @fb_item.fb_time %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @fb_item.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_fb_item_path(@fb_item) %> |
+<%= link_to 'Back', fb_items_path %>

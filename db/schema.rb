@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141213164258) do
+ActiveRecord::Schema.define(version: 20141213214318) do
+
+  create_table "fb_items", force: true do |t|
+    t.string   "fb_id"
+    t.integer  "likes_count"
+    t.integer  "comments_count"
+    t.string   "content"
+    t.datetime "fb_time"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "provider"
