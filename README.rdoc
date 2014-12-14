@@ -3,3 +3,11 @@
 works for the test user login 
   * username = rudram_iglonkf_pashupathim@tfbnw.net
   * password = rudra
+
+
+to test with a real account, goto https://developers.facebook.com/tools/explorer?method=GET&path=me%3Ffields%3Did%2Cname&version=v2.2 
+and generate a access_token with user_status and user_photos privilages enabled.
+
+add the access_token to the DB using :
+
+update table user set oauth_token = <your new token> where id = <USER ID>
