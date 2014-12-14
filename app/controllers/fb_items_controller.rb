@@ -3,12 +3,15 @@ class FbItemsController < ApplicationController
 
   # GET /fb_items
   def index
-    @fb_items = FbItem.all
+    if (params[:items] == "posts")
+      @fb_items = FbItem.posts(current_user.id)
+    elsif (params[:items] == "photos")
+      @fb_items = FbItem.photos(current_user.id)
+    end
   end
 
   # GET /fb_items/1
   def show
-    @fb_items = current_user.fb_items
   end
 
   private

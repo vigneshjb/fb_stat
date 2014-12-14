@@ -11,7 +11,6 @@ gem "koala"
 gem "therubyracer"
 gem "less-rails" 
 gem "twitter-bootstrap-rails"
-gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'spring', group: :development

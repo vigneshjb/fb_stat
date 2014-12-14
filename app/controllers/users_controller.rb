@@ -15,27 +15,19 @@ class UsersController < ApplicationController
 		puts "Making a HTTP request to "+ request_album_list_url
 		json_response = fetch_paginated_data(request_album_list_url)
 		json_response[:data].each{|item| album_id = item[:id] if item[:name]=="Profile Pictures" }
-		# puts "album id is: "+album_id
 
-		# # FETCH IMAGES, LIKES and COMMENTS
+		# FETCH IMAGES, LIKES and COMMENTS
 		profile_photos_array = []
 		#FIXME :make a hash and use to URI 
 		request_images_likes_comments_url = base_url+album_id+"/photos"+"?fields="+picture+time_field_likes_comments+"&access_token="+access_token
-		# puts "making request to "+request_images_likes_comments_url
 		json_response = fetch_paginated_data(request_images_likes_comments_url)
 		json_response[:data].each{|node| profile_photos_array.push({:picture_url => node[:picture], :fb_id => node[:id], :upload_time => node[:updated_time], :total_likes => node[:likes][:summary][:total_count], :total_comments => node[:comments][:summary][:total_count] }) }
 
 		statuses_array = []
 		#FIXME :make a hash and use to URI 
 		request_status_url = base_url+user_id+"/statuses"+"?fields="+message+time_field_likes_comments+"&access_token="+access_token
-		# puts "making request to "+request_status_url
 		json_response = fetch_paginated_data(request_status_url)
 		json_response[:data].each{|node| statuses_array.push({:message => node[:message], :upload_time => node[:updated_time], :fb_id => node[:id], :total_likes => node[:likes]?node[:likes][:summary][:total_count]:0, :total_comments => node[:comments]?node[:comments][:summary][:total_count]:0 }) unless node[:message].nil?}
-
-		# Working here !! 
-			# use the arrays to do the core logig 
-			# use user.fb_item.create
-			# display
 
 		current_user.fb_items.each do |item|
 			item.destroy!
@@ -47,7 +39,8 @@ class UsersController < ApplicationController
 			item.likes_count = element[:total_likes]
 			item.comments_count = element[:total_comments]
 			item.content = element[:picture_url]
-			item.fb_time=element[:upload_time]
+			item.fb_time = element[:upload_time]
+			item.type = "photo" #FIXME: Move to constants
 			item.save!
 		end
 
@@ -58,6 +51,7 @@ class UsersController < ApplicationController
 			item.comments_count = element[:total_comments]
 			item.content = element[:message]
 			item.fb_time=element[:upload_time]
+			item.type = "post" #FIXME: Move to constants
 			item.save!
 		end
 

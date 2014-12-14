@@ -19,10 +19,9 @@
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:fb_id) %></th>
       <th><%= model_class.human_attribute_name(:content) %></th>
-      <th><%= model_class.human_attribute_name(:fb_time) %></th>
       <th><%= model_class.human_attribute_name(:like_count) %></th>
       <th><%= model_class.human_attribute_name(:comment_count) %></th>
-      <th><%= model_class.human_attribute_name(:user_id) %></th>
+      <th><%= model_class.human_attribute_name(:fb_time) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
     </tr>
   </thead>
@@ -31,11 +30,16 @@
       <tr>
         <td><%= fb_item.id %></td>
         <td><%= fb_item.fb_id %></td>
-        <td><%= fb_item.content %></td>
-        <td><%= fb_item.fb_time %></td>
+        <td>
+          <% if params[:items]=="photos" %>
+            <img src = "<%= fb_item.content %>">
+          <% else %>
+            <%= fb_item.content %>
+          <% end %>
+        </td>
         <td><%= fb_item.likes_count %></td>
         <td><%= fb_item.comments_count %></td>
-        <td><%= fb_item.user_id %></td>
+        <td><%= fb_item.fb_time %></td>
         <td><%=l fb_item.created_at %></td>
       </tr>
     <% end %>
