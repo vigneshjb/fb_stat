@@ -1,34 +1,25 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = FbItem -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
 
-<p>
-  <strong>Fb:</strong>
-  <%= @fb_item.fb_id %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:fb_id) %>:</strong></dt>
+  <dd><%= @fb_item.fb_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:content) %>:</strong></dt>
+  <dd><%= @fb_item.content %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:fb_time) %>:</strong></dt>
+  <dd><%= @fb_item.fb_time %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
+  <dd><%= @fb_item.user_id %></dd>
+</dl>
 
-<p>
-  <strong>Likes count:</strong>
-  <%= @fb_item.likes_count %>
-</p>
-
-<p>
-  <strong>Comments count:</strong>
-  <%= @fb_item.comments_count %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @fb_item.content %>
-</p>
-
-<p>
-  <strong>Fb time:</strong>
-  <%= @fb_item.fb_time %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @fb_item.user_id %>
-</p>
-
-<%= link_to 'Edit', edit_fb_item_path(@fb_item) %> |
-<%= link_to 'Back', fb_items_path %>
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              fb_items_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_fb_item_path(@fb_item), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              fb_item_path(@fb_item),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

@@ -1,35 +1,39 @@
-<h1>Listing fb_items</h1>
+<%- model_class = FbItem -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <div class="pull-right">
+    <% if params[:items] == "posts" %>
+      <%= link_to t('.shift_to_photo_view', :default => t("helpers.links.index")),
+                      fb_items_path(:items => "photos"), :class => 'btn btn-default btn-xs' %>
+    <% elsif params[:items] == "photos" %>
+      <%= link_to t('.shift_to_posts_view', :default => t("helpers.links.index")),
+                      fb_items_path(:items => "posts"), :class => 'btn btn-default btn-xs' %>
+    <% end %>
 
-<table>
+    <%#= link_to t('.refresh_data', :default => t("helpers.links.refresh_data")), :refresh_content_fb_item, :class => 'btn btn-default btn-xs' %>
+  </div>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Fb</th>
-      <th>Likes count</th>
-      <th>Comments count</th>
-      <th>Content</th>
-      <th>Fb time</th>
-      <th>User</th>
-      <th colspan="3"></th>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:fb_id) %></th>
+      <th><%= model_class.human_attribute_name(:content) %></th>
+      <th><%= model_class.human_attribute_name(:fb_time) %></th>
+      <th><%= model_class.human_attribute_name(:user_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @fb_items.each do |fb_item| %>
       <tr>
+        <td><%= link_to fb_item.id, fb_item_path(fb_item) %></td>
         <td><%= fb_item.fb_id %></td>
-        <td><%= fb_item.likes_count %></td>
-        <td><%= fb_item.comments_count %></td>
         <td><%= fb_item.content %></td>
         <td><%= fb_item.fb_time %></td>
         <td><%= fb_item.user_id %></td>
-        <td><%= link_to 'Show', fb_item %></td>
-        <td><%= link_to 'Edit', edit_fb_item_path(fb_item) %></td>
-        <td><%= link_to 'Destroy', fb_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=l fb_item.created_at %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Fb item', new_fb_item_path %>
