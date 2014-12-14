@@ -8,6 +8,7 @@ class FbItemsController < ApplicationController
 
   # GET /fb_items/1
   def show
+    @fb_items = current_user.fb_items
   end
 
   private

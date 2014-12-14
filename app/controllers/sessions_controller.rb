@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   def create
     user = User.from_omniauth(env["omniauth.auth"])
     session[:user_id] = user.id
-    redirect_to root_url
+    redirect_to menu_path
   end
 
   def destroy
@@ -13,6 +13,6 @@ class SessionsController < ApplicationController
 
   private
   	def userparams 
-  		params.require(:user).permit(:provider, :uid, :name, :oauthtoken, :oauthexpiresat) 
+  		params.require(:user).permit(:provider, :uid, :name, :oauthtoken, :oauthexpiresat, :fbid, :sex) 
   	end
 end

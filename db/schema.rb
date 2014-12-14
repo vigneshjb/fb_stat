@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141213214318) do
+ActiveRecord::Schema.define(version: 20141214192051) do
 
   create_table "fb_items", force: true do |t|
     t.string   "fb_id"
     t.integer  "likes_count"
     t.integer  "comments_count"
-    t.string   "content"
+    t.text     "content",        limit: 2147483647
     t.datetime "fb_time"
     t.integer  "user_id"
     t.datetime "created_at"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 20141213214318) do
     t.string   "uid"
     t.string   "name"
     t.string   "oauth_token"
+    t.string   "fbid"
+    t.string   "sex"
     t.datetime "oauth_expires_at"
     t.datetime "created_at"
     t.datetime "updated_at"

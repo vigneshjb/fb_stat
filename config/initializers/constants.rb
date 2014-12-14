@@ -1,6 +1,11 @@
 module Constants
 	
+	# MAin App data
 	FACEBOOK_APP_ID = "279430988741224"
 	FACEBOOK_SECRET = "e8e7a9e893c4420c6cfa369c45bbdd83"
+
+	# Test App DAta
+	# FACEBOOK_APP_ID = "910948372256146"
+	# FACEBOOK_SECRET = "d5abdda41236c99ff21d89d8ec75e375"
 	
 end
