@@ -1,5 +1,5 @@
 class FbItemsController < ApplicationController
-  before_action :set_fb_item, only: [:show, :edit, :update, :destroy]
+  before_action :set_fb_item, only: [:show]
 
   # GET /fb_items
   def index
@@ -9,13 +9,6 @@ class FbItemsController < ApplicationController
   # GET /fb_items/1
   def show
   end
-
-  def refresh_data
-    # peform action here
-    items = "posts"
-    redirect_to :action => 'index'
-  end
-
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -4,13 +4,13 @@
   <div class="pull-right">
     <% if params[:items] == "posts" %>
       <%= link_to t('.shift_to_photo_view', :default => t("helpers.links.index")),
-                      fb_items_path(:items => "photos"), :class => 'btn btn-default btn-xs' %>
+                      user_fb_items_path(:items => "photos"), :class => 'btn btn-default btn-xs' %>
     <% elsif params[:items] == "photos" %>
       <%= link_to t('.shift_to_posts_view', :default => t("helpers.links.index")),
-                      fb_items_path(:items => "posts"), :class => 'btn btn-default btn-xs' %>
+                      user_fb_items_path(:items => "posts"), :class => 'btn btn-default btn-xs' %>
     <% end %>
 
-    <%#= link_to t('.refresh_data', :default => t("helpers.links.refresh_data")), :refresh_content_fb_item, :class => 'btn btn-default btn-xs' %>
+    <%= link_to t('.refresh_data', :default => t("helpers.links.refresh_data")), user_refresh_data_path, :class => 'btn btn-default btn-xs' %>
   </div>
 </div>
 <table class="table table-striped">
