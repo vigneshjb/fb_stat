@@ -19,8 +19,8 @@ Fucntionality changes
 
 * too many RESTFUL fetch and too many access to db !! FIX THAT @method refresh_data in users_controller.rb
 * the show link for fb_item (I have not added it yet) should enable more statistical display including :
-=> number of male and female likes
-=> 'best commment' (can be done based on number of likes for a comment and number of people tagged under that)
+** number of male and female likes
+** 'best commment' (can be done based on number of likes for a comment and number of people tagged under that)
 * I have plans of adding other social network sites also .. twitter, github about.me
 * Integrate with klout ... sounds similar
 
