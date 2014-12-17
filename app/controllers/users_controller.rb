@@ -40,7 +40,7 @@ class UsersController < ApplicationController
 			item.comments_count = element[:total_comments]
 			item.content = element[:picture_url]
 			item.fb_time = element[:upload_time]
-			item.type = "photo" #FIXME: Move to constants
+			item.item_type = "photo" #FIXME: Move to constants
 			item.save!
 		end
 
@@ -51,7 +51,7 @@ class UsersController < ApplicationController
 			item.comments_count = element[:total_comments]
 			item.content = element[:message]
 			item.fb_time=element[:upload_time]
-			item.type = "post" #FIXME: Move to constants
+			item.item_type = "post" #FIXME: Move to constants
 			item.save!
 		end
 

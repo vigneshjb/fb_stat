@@ -4,9 +4,9 @@ class FbItemsController < ApplicationController
   # GET /fb_items
   def index
     if (params[:items] == "posts")
-      @fb_items = FbItem.posts(current_user.id)
+      @fb_items = current_user.fb_items.posts
     elsif (params[:items] == "photos")
-      @fb_items = FbItem.photos(current_user.id)
+      @fb_items = current_user.fb_items.photos
     end
   end
 

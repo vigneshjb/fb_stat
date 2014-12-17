@@ -10,7 +10,7 @@ and generate a access_token with user_status and user_photos privilages enabled.
 
 add the access_token to the DB using :
 
-  update table user set oauth_token = <your new token> where id = <USER ID>
+  update users set oauth_token = <your new token> where id = <USER ID>;
   
   
 To mention any fixes that need to be done, use 
