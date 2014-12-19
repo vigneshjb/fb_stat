@@ -3,21 +3,13 @@ class User < ActiveRecord::Base
   has_many :items, dependent: :destroy
   has_many :authentications, dependent: :destroy
 
-  def self.find_for_auth
-    
-  end
-
-	def self.from_omniauth(auth)
-    # permit_params :provider, :user
-    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-      user.provider = auth.provider
-      user.uid = auth.uid
-      user.name = auth.info.name
-      user.oauth_token = auth.credentials.token
-      user.oauth_expires_at = Time.at(auth.credentials.expires_at)
-      user.fbid = auth.extra.raw_info.username
-      user.sex = auth.extra.raw_info.gender
-      user.save!
+  def self.find_for_oauth(auth)
+    registered_user = User.where(:email => auth.info.email).first
+    if registered_user
+      return registered_user
+    else
+      user = User.create(name:auth.extra.raw_info.name, email: auth.info.email,
+                sex: auth.extra.raw_info.gender)
     end
   end
 
