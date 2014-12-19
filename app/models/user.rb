@@ -1,5 +1,11 @@
 class User < ActiveRecord::Base
   has_many :fb_items , :dependent => :destroy
+  has_many :items, dependent: :destroy
+  has_many :authentications, dependent: :destroy
+
+  def self.find_for_auth
+    
+  end
 
 	def self.from_omniauth(auth)
     # permit_params :provider, :user

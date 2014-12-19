@@ -1,4 +1,5 @@
 class FbItem < ActiveRecord::Base
+  has_one :item, as: :itemizable, dependent: :destroy
 	belongs_to :user
 
 	scope :photos, lambda{
