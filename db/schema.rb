@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141214200222) do
+ActiveRecord::Schema.define(version: 20141219203323) do
 
   create_table "fb_items", force: true do |t|
     t.string   "fb_id"
@@ -22,8 +22,19 @@ ActiveRecord::Schema.define(version: 20141214200222) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "type"
+    t.string   "item_type"
   end
+
+  create_table "items", force: true do |t|
+    t.integer  "itemizable_id"
+    t.string   "itemizable_type"
+    t.integer  "user_id"
+    t.string   "enabled_features"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "items", ["user_id"], name: "index_items_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "provider"

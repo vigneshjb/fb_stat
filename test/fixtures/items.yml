@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  itemizable_id: 1
+  itemizable_type: MyString
+  user_id: 
+  enabled_features: MyString
+
+two:
+  itemizable_id: 1
+  itemizable_type: MyString
+  user_id: 
+  enabled_features: MyString
