@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141219204538) do
+ActiveRecord::Schema.define(version: 20141219204717) do
 
   create_table "authentications", force: true do |t|
     t.string   "provider"
@@ -50,13 +50,8 @@ ActiveRecord::Schema.define(version: 20141219204538) do
   add_index "items", ["user_id"], name: "index_items_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
-    t.string   "provider"
-    t.string   "uid"
     t.string   "name"
-    t.string   "oauth_token"
-    t.string   "fbid"
     t.string   "sex"
-    t.datetime "oauth_expires_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
