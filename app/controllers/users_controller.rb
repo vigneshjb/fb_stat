@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 		time_field_likes_comments = "updated_time,comments.limit(1).summary(true),likes.limit(1).summary(true)"
 		picture = "picture,"
 		message = "message,"
-		access_token = current_user.oauth_token
+		access_token = current_user.authentications.find_by(provider: 'facebook').oauth_token
 		user_id = "me"
 
     	# FETCH ALL ALBUM IDS 
