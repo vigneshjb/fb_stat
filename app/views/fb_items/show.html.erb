@@ -4,15 +4,17 @@
 </div>
 
 <dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:fb_id) %>:</strong></dt>
-  <dd><%= @fb_item.fb_id %></dd>
   <dt><strong><%= model_class.human_attribute_name(:content) %>:</strong></dt>
-  <dd><%= @fb_item.content %></dd>
+  <% if @fb_item.content.start_with?("""http") %>
+    <dd><img src = "<%= @fb_item.content %>"/></dd>
+  <% else %>
+    <dd><%= @fb_item.content %></dd>
+  <% end %>
   <dt><strong><%= model_class.human_attribute_name(:fb_time) %>:</strong></dt>
   <dd><%= @fb_item.fb_time %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
-  <dd><%= @fb_item.user_id %></dd>
-</dl>
-
-<%= link_to t('.back', :default => t("helpers.links.back")),
-              fb_items_path, :class => 'btn btn-default'  %>
+  <dt><strong><%= model_class.human_attribute_name(:likes_count)%></strong></dt>
+  <dd><%= @fb_item.likes_count %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:comments_count)%></strong></dt>
+  <dd><%= @fb_item.comments_count %></dd>
+  
+</dl> 
