@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20141219211507) do
     t.datetime "updated_at"
   end
 
-  add_index "authentications", ["user_id"], name: "index_authentications_on_user_id", using: :btree
+  add_index "authentications", ["user_id"], name: "index_authentications_on_user_id"
 
   create_table "fb_items", force: true do |t|
     t.string   "fb_id"
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20141219211507) do
     t.datetime "updated_at"
   end
 
-  add_index "items", ["user_id"], name: "index_items_on_user_id", using: :btree
+  add_index "items", ["user_id"], name: "index_items_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "name"
